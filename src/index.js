@@ -5,8 +5,16 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import store from './store'
 
+const render = () => {
+  const state = store.getState()
+  ReactDOM.render(<App {...state} />, document.getElementById('root'));
+}
 
-const state = store.getState()
+render()
+store.subscribe(render)
 
-ReactDOM.render(<App {...state} />, document.getElementById('root'));
+setTimeout(() => {
+  store.dispatch({type: 'TODO_ADD', payload: {id: 4, name: 'New Todo', isComplete: false}})
+}, 1000)
+
 registerServiceWorker();
