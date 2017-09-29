@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { updateCurrent } from './reducers/todo';
 import logo from './logo.svg';
 import './App.css';
@@ -27,13 +26,16 @@ class App extends Component {
   }
 }
 
-// const actions = bindActionCreators({ updateCurrent }, store.dispatch);
-// store의 state를 Component의 props에 매핑해줍니다.
 const mapStateToProps = (state) => state
-
-// 컴포넌트의 특정 함수형 props 를 실행 했을 때 개발자가 지정한 action을 dispatch 하도록 설정합니다
-const mapDispatchToProps = (dispatch) => bindActionCreators({ updateCurrent }, dispatch)
+// const mapDispatchToProps = {updateCurrent}
 
 // connect는 React Component 를 redux store에 연결 시켜줍니다.
-const Connected = connect(mapStateToProps, mapDispatchToProps)(App)
-export default Connected
+
+//==================================================================
+// const Connected = connect((state) => state, {updateCurrent})(App)
+
+//==================================================================
+export default connect(
+  (state) => state,
+  {updateCurrent}
+)(App)
