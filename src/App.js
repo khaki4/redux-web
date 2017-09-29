@@ -25,7 +25,10 @@ class App extends Component {
   }
 }
 
-// export default App
+
+// store의 state를 Component의 props에 매핑해줍니다.
 const mapStateToProps = (state) => state
+
+// connect는 React Component 를 redux store에 연결 시켜줍니다.
 const Connected = connect(mapStateToProps)(App)
 export default Connected
