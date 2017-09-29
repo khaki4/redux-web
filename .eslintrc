@@ -1,0 +1,67 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "indent": [2, 2, {
+      "SwitchCase": 1
+    }],
+    "requireSemicolons": "off",
+    "global-require": "off",
+    "arrow-body-style": "off",
+    "vars-on-top": "off",
+    "prefer-arrow-callback": "warn",
+    "strict": "warn",
+    "no-var": "warn",
+    "no-console": "off",
+    "prefer-template": "off",
+    "spaced-comment": "off",
+    "max-len": "off",
+    "arrow-parens": "off",
+    "quotes": "off",
+    "no-param-reassign": "off",
+    "no-undef": "warn",
+    "consistent-return": "off",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "off",
+    "comma-dangle": "off",
+    "camelcase": "off",
+    "no-mixed-operators": "warn",
+    "object-shorthand": "warn",
+    "no-multiple-empty-lines": "off",
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "prefer-const": "off",
+    "padded-blocks": "off",
+    "eqeqeq": "warn",
+    "no-trailing-spaces": "off",
+    "no-shadow": "off",
+    "object-curly-spacing": "off",
+    "array-callback-return": "off",
+    "quote-props": "off",
+    "eol-last": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "generator-star-spacing": 0,
+    "semi": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
+    "class-methods-use-this": "off"
+  },
+  "globals": {
+    "naviview": true,
+    "M_SEQ": true,
+    "isFirstStart": true,
+    "var2": false
+  }
+}

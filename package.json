@@ -8,6 +8,7 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "^15.1.0",
     "react-scripts": "1.0.7"
   },
   "scripts": {
