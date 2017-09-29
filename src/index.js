@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { bindActionCreators } from 'redux';
+import { Provider } from 'react-redux';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
@@ -16,19 +17,12 @@ import { updateCurrent } from './reducers/todo';
 
 const actions = bindActionCreators({ updateCurrent }, store.dispatch)
 
-const render = () => {
-  const state = store.getState();
-  ReactDOM.render(
+ReactDOM.render(
+  <Provider store={store}>
     <App
-      todos={state.todos}
-      currentTodo={state.currentTodo}
       changeCurrent={actions.updateCurrent}
-    />,
-    document.getElementById('root')
-  );
-};
+    />
+  </Provider>,
+  document.getElementById('root')
+);
 
-render();
-store.subscribe(render);
-
-registerServiceWorker();
