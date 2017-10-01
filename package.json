@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^15.1.0",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
     "start": "react-scripts start",
